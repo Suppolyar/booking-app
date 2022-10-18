@@ -1,16 +1,22 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
+import dayjs from 'dayjs';
 
 const emits = defineEmits(['update:modelValue']);
 const props = defineProps<{
+  modelValue: any
   label?: string
-  type: 'number' | 'date' | 'text'
+  min?: string
 }>();
 
-const inputValue = ref();
+const inputValue = ref(dayjs(props.modelValue).format('YYYY-MM-DD'));
 
 watch(inputValue, (newVal) => {
   emits('update:modelValue', newVal);
+});
+
+watch(() => props.modelValue, (newVal) => {
+  inputValue.value = newVal;
 });
 </script>
 
@@ -22,7 +28,8 @@ watch(inputValue, (newVal) => {
     <input
       v-model="inputValue"
       class="rounded border border-slate-500 px-4 py-2 placeholder:text-slate-300"
-      :type="props.type"
+      type="date"
+      :min="props.min"
     >
   </label>
 </template>
