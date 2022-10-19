@@ -54,7 +54,7 @@ watch(quantityOfDays, (newVal) => {
 
   <div
     class="flex flex-col items-center justify-center
-    gap-4 rounded p-4 shadow shadow-sky-700 md:flex-row"
+    gap-4 rounded pb-4 pt-8 shadow shadow-sky-700 md:flex-row"
   >
     <VDatepicker
       v-model="dateFrom"

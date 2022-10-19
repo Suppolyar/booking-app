@@ -21,13 +21,13 @@ watch(() => props.modelValue, (newVal) => {
 </script>
 
 <template>
-  <label>
-    <div class="text-sm text-slate-700">
+  <label class="relative">
+    <div class="absolute top-[-18px] left-0 text-sm text-slate-700">
       {{ props.label }}
     </div>
     <input
       v-model="inputValue"
-      class="rounded border border-slate-500 px-4 py-2 placeholder:text-slate-300"
+      class="rounded px-4 py-2 shadow shadow-sky-700 placeholder:text-slate-300"
       type="date"
       :min="props.min"
     >

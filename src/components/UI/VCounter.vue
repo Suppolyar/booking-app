@@ -49,9 +49,9 @@ watch(() => props.modelValue, (newVal) => {
 
 <style scoped>
 .btn-count {
-  @apply rounded bg-slate-700 px-4 py-2.5 text-white
+  @apply rounded bg-slate-700 px-4 py-2.5 text-white shadow shadow-slate-700
   disabled:opacity-30
-  hover:bg-sky-700
+  hover:bg-sky-700 hover:shadow-sky-700
   duration-300
 }
 </style>
