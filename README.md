@@ -1,4 +1,4 @@
-# EPN frontend on VUE 3 and TypeScript
+# Booking App
 
 ## General
 - Use npm
